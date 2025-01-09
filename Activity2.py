@@ -1,8 +1,8 @@
 # Assigning Different Variables
-name = "Penguin"
-age = 15
-is_student = True
-weight = 38.5
+name = "Akash"
+age = 5
+is_student = False
+weight = 70.8
 
 # Printing Different Variables and their Data Type
 print("Name :", name)
@@ -19,9 +19,9 @@ print("Data Type of weight is", type(weight))
 
 # Type casting to convert the datatype of variables
 print("\n After Type Casting....")
-age = str(age)
+age = float(age)
 print(age)
 print("Data Type of age is", type(age))
-weight = int(weight)
+weight = str(weight)
 print(weight)
 print("Data Type of Weight is", type(weight))
