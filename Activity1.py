@@ -1,16 +1,26 @@
 # Let's check the datatype of different values
-a = '5'
+
+#Integer
+a = 5
 print(a)
 print("type of a: ", type(a))
 
+#Float
 b=2.5
 print(b)
 print("type of b: ", type(b))
 
-c= "coding"
-print(c)
+#character
+c= "Hello"
+Print(c)
 print("type of c: ", type(c))
 
-d= False
+#Boolean     
+d= True
 print(d)
 print("type of d: ", type(d))
+
+if c == 'hello':
+    print('Hi Havish')
+else:
+    print('the value was supposed to be False')

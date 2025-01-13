@@ -1,12 +1,13 @@
 # Assigning Different Variables
-name = "Akash"
+name = "akash"
 age = 5
 is_student = False
 weight = 70.8
 
 # Printing Different Variables and their Data Type
-print("Name :", name)
-print("Data Type of Name is", type(name))
+print("Name :", name.lower())
+print("Name :", name.islower())
+print("Data Type of Name is", name)
 
 print("Age :", age)
 print("Data Type of Age is", type(age))
@@ -22,6 +23,6 @@ print("\n After Type Casting....")
 age = float(age)
 print(age)
 print("Data Type of age is", type(age))
-weight = str(weight)
+weight = int(weight)
 print(weight)
 print("Data Type of Weight is", type(weight))
