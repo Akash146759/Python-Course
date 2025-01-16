@@ -1,19 +1,11 @@
-# Program to find the ASCII value of a character
-character = input("Enter a character: ")
+marks1 = 41
 
 
-if len(character) == 1:
-    # Get the ASCII value using ord()
-    ascii_value = ord(character)
-    print(f"The ASCII value of '{character}' is {ascii_value}")
+if marks1>50:
+    print('you have passed\n')
+    if marks1>70:
+        print('you have passed with flying colours!')
+    else:
+        print('Thats not bad either!')
 else:
-    print("Please enter a single character.")
-
-
-
-n1=int(input("enter numerator: "))  
-n2=int(input("enter denominator: "))
-if n1%n2==0:
-    print(str(n1)+" is divisible by  "+str(n2))
-else:
-    print(str(n1)+" is not divisible by "+str(n2))
+    print('Please try again next year!')
