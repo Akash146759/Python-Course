@@ -12,7 +12,7 @@ print("type of b: ", type(b))
 
 #character
 c= "Hello"
-Print(c)
+print(c)
 print("type of c: ", type(c))
 
 #Boolean     
