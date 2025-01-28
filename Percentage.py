@@ -7,9 +7,8 @@ hindi = int(input("hindi :"))
 
 # Let's calculate the percentage of marks
 sum = math+english+science+hindi
-print("sun of math,english,science and hindi")
+print("sun of math,english,science and hindi",sum)
 
 perc = (sum/400)*100
 
-print(end="Percentage Mark = ")
-print(perc)
+print(end="Percentage Mark = ", perc)
