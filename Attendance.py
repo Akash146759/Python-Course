@@ -12,4 +12,7 @@ if med == 'no':
         
 else:
     print('You are allowed! No Issues! Best of health')
+
+
+
     

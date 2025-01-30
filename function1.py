@@ -11,4 +11,3 @@ def akash():
 
 akash()
 
-circumference = 3.14 * diameter
