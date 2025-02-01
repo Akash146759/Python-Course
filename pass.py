@@ -4,6 +4,7 @@ for x in range(10): #iterate for loop
 
     elif x % 15 == 0: #condition 2
        pass       #pass statement
+       print("Mihir")
 
     elif x % 5 == 0: #condition 3
        print("fizz")   #display result

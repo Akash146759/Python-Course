@@ -1,26 +1,22 @@
 # Let's check the datatype of different values
 
-#Integer
+#Integer [ int ]
 a = 5
 print(a)
 print("type of a: ", type(a))
 
-#Float
+#Float [float]
 b=2.5
 print(b)
 print("type of b: ", type(b))
 
-#character
-c= "Hello"
+#character : string [str]
+c= "Hello there"
 print(c)
 print("type of c: ", type(c))
 
-#Boolean     
+#Boolean [bool]    
 d= True
 print(d)
 print("type of d: ", type(d))
 
-if c == 'hello':
-    print('Hi Havish')
-else:
-    print('the value was supposed to be False')

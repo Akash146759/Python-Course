@@ -1,5 +1,5 @@
 # Assigning Different Variables
-name = "akash"
+name = "AKASH"
 age = 5
 is_student = False
 weight = 70.8
@@ -7,7 +7,7 @@ weight = 70.8
 # Printing Different Variables and their Data Type
 print("Name :", name.lower())
 print("Name :", name.islower())
-print("Data Type of Name is", name)
+print("Data Type of Name is", type(name))
 
 print("Age :", age)
 print("Data Type of Age is", type(age))
@@ -26,3 +26,5 @@ print("Data Type of age is", type(age))
 weight = int(weight)
 print(weight)
 print("Data Type of Weight is", type(weight))
+
+
