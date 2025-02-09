@@ -1,9 +1,16 @@
 
+print('multiplication table of 2')
 
-a = [1,2,3,4,5]
 
-print(a)
+for i in range(50,9,-10):
+    product = 2 * i
+    print('2 ', i , 's are : ', product)
 
-a.append(87)
 
-print(a)
+
+
+
+
+
+
+

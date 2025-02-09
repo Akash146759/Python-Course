@@ -1,5 +1,7 @@
 # function to check whether 
 # first and last character of words match
+# words = ['abc', 'cfc','xyz', 'aba', '1221','3883','7654']
+# word = 0 ['abc' ]
 def match_words(words):
 	ctr = 0
 	lst = []
@@ -11,8 +13,8 @@ def match_words(words):
 	print("List of words with first and last character same\n", lst)
 	return ctr
 	
-count = match_words(['abc', 'cfc','xyz', 'aba', '1221'])
-print("Number of words having first and last character same:", count)
+result = match_words(['abc', 'cfc','xyz', 'aba', '1221','3883','7654'])
+print("Number of words having first and last character same:", result)
 
 
 

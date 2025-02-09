@@ -1,14 +1,14 @@
-name = 'Mihir'
+name = 'Kwasi'
 grade = 9
 
-def mihir():
+def Jeffin(name,grade):
     print('welcome to function!')
     print('hi', name, 'heard you are in ',grade, 'class')
 
-mihir()
+Jeffin()
 
-def akash():
+def Abhiraj():
     print('Akash teaches', name, 'who is in class : ', grade)
 
-akash()
+Abhiraj()
 
