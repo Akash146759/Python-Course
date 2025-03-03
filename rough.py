@@ -1,20 +1,8 @@
-import turtle
+n=int(input("enter the number of rows:"))
+for i in range(1-1,n,1):
+    for j in range(0,i):
+        print("*",end="")
+    print()
 
-turtle.Screen().bgcolor("Aqua")
-board = turtle.Turtle()
- 
-# first triangle for star
-board.forward(100) # draw base
- 
-board.left(120)
-board.forward(100)
- 
-board.left(120)
-board.forward(100)
-
- 
-board.penup()
-board.right(150)
-board.forward(50)
-
-turtle.done()
+for i in range(0, n, 1):
+    print(" " * (n - i) + "*" * i)
