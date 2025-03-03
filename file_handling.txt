@@ -1,0 +1,1 @@
+Hello Student!Welcome to coding classes!To open a new text file on a Mac, open the "TextEdit" application, then click "File" > "New" in the menu bar; you can also use the keyboard shortcut Command + N to quickly create a new text document. 

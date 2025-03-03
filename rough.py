@@ -1,10 +1,20 @@
-#Take input
-print("Half Pyramid Pattern of Stars (*):")
-n = int(input("enter the number of rows: "))
-#outer loop to handle number of rows
-for i in range(n): 
-  #inner loop to handle number of columns
-    for j in range(i+1):
-      #display result
-        print("@ ", end="")
-    print()
+import turtle
+
+turtle.Screen().bgcolor("Aqua")
+board = turtle.Turtle()
+ 
+# first triangle for star
+board.forward(100) # draw base
+ 
+board.left(120)
+board.forward(100)
+ 
+board.left(120)
+board.forward(100)
+
+ 
+board.penup()
+board.right(150)
+board.forward(50)
+
+turtle.done()

@@ -1,5 +1,5 @@
 #Take input from user
-rows = 5
+rows = int(input("enter the number of rows: "))
 number = 1 #initialise by 1
 
 print("Floyd's Triangle") 
