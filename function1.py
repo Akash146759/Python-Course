@@ -1,14 +1,18 @@
-name = 'Kwasi'
-grade = 9
 
-def Jeffin(name,grade):
-    print('welcome to function!')
-    print('hi', name, 'heard you are in ',grade, 'class')
 
-Jeffin()
+def weekday():
+    print('Today is Saturday night! Time to party!')
+    print('Today is Sunday night! Time to sulk!')
+    print('Today is Monday night! Time to study!\n')
 
-def Abhiraj():
-    print('Akash teaches', name, 'who is in class : ', grade)
+def random1():
+    print('mercury is the closest to the sun!')
+    print('Pluto was kicked from solar system! \n')
+   
 
-Abhiraj()
+def print1():
+    for i in range(5):
+        weekday()
+        random1()
 
+print1()

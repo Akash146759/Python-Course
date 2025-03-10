@@ -1,13 +1,12 @@
-# open file and store file object in a variable
-text = open('file_handling.txt', 'w')
+file = open('file_handling.txt','r')
 
-text.write('Hello Student!')
-text.write('Welcome to coding classes!')
-# read the contents of file
-text.close()
+print("\n Read in lines \n")
+print(file.readline())
+print(file.readline())
+print(file.readline())
+print(file.readline())
 
-a = open('file_handling.txt')
-print(a.read())
 
-# close the file
-a.close()
+print("\n Read in parts \n")
+print(file.read(100))
+file.close()
