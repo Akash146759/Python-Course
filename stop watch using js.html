@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classy Stopwatch</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #e0e0e0, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Wrapper (Timer Container) */
+        .wrapper {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 2.5rem;
+            color: #333333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Timer Display */
+        p {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4f4f4f;
+            margin-bottom: 30px;
+        }
+
+        /* Button Styling */
+        button {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4f4f4f;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #333333;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design for Small Screens */
+        @media screen and (max-width: 600px) {
+            .wrapper {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+    </div>
+    <script>
+        window.onload = function () {
+            var seconds = 0;
+            var milliseconds = 0;
+            var appendmilliseconds = document.getElementById("milliseconds");
+            var appendSeconds = document.getElementById("seconds");
+            var buttonStart = document.getElementById('button-start');
+            var buttonStop = document.getElementById('button-stop');
+            var buttonReset = document.getElementById('button-reset');
+            var Interval;
+
+            buttonStart.onclick = function () {
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+            }
+
+            buttonStop.onclick = function () {
+                clearInterval(Interval);
+            }
+
+            buttonReset.onclick = function () {
+                clearInterval(Interval);
+                milliseconds = 0;
+                seconds = 0;
+                appendmilliseconds.innerHTML = "00";
+                appendSeconds.innerHTML = "00";
+            }
+
+            function startTimer() {
+                milliseconds++;
+
+                if (milliseconds <= 9) {
+                    appendmilliseconds.innerHTML = "0" + milliseconds;
+                }
+                if (milliseconds > 9) {
+                    appendmilliseconds.innerHTML = milliseconds;
+                }
+                if (milliseconds > 99) {
+                    seconds++;
+                    appendSeconds.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+                    milliseconds = 0;
+                    appendmilliseconds.innerHTML = "00";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
