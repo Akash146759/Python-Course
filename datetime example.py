@@ -1,16 +1,11 @@
 import datetime
-
+from datetime import *
 import calendar
 
-from calendar import *
-
-from datetime import *
-
 n = datetime.now()
-
 print(n)
 
-yy = 2022
-mm = 12
+yy= 2099
+mm = 4
 
-print(calendar(yy,mm))
+print(calendar.month(yy,mm))

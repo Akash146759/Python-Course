@@ -8,10 +8,8 @@ def getRandomDate(startDate, endDate):
     starttime = time.mktime(time.strptime(startDate, dateFormat)) 
     endtime = time.mktime(time.strptime(endDate, dateFormat))
     randomTime = starttime + randomGenerator * (endtime - starttime)
-
-   
     randomDate = time.strftime(dateFormat, time.localtime(randomTime))
 
     return randomDate
 
-print("Random Date = ", getRandomDate("1/1/2020", "12/12/2024"))
+print("Random Date = ", getRandomDate("1/1/1991", "12/12/2024"))

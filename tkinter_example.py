@@ -4,9 +4,9 @@ from tkinter import *
 root = Tk()
 
 # root window title and dimension
-root.title("Welcome to Codingal")
+root.title("Welcome Mihir to Codingal")
 # Set geometry (widthxheight)
-root.geometry('350x200')
+root.geometry('500x500')
 
 # all widgets will be here
 # Execute Tkinter

@@ -18,4 +18,3 @@ result = match_words(['abc', 'cfc','xyz', 'aba', '1221','3883','7654'])
 print("Number of words having first and last character same:", result)
 
 
-

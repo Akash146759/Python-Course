@@ -1,6 +1,6 @@
 #Create an empty list
-print()
-
+empty_list = []
+print(empty_list)
 
 # A list of numbers
 numbers = [1, 2, 3, 4, 5]
@@ -10,7 +10,7 @@ r = numbers[::-1]
 print(r)
 
 # Use * operator
-triples = [1, 2, 3] * 4
+triples = [1, 2, 3] * 3
 print(triples)
 
 a = 'elephant'

@@ -1,7 +1,9 @@
-student_data = {'id1':
+student_data = {
+    'id1':
     {'name':['Sara'],
     'class': ['V'],
-    'subject_integration': ['english, maths, science']},
+    'subject_integration': ['english, maths, science']
+    },
     'id2':
     {'name':['David'],
     'class': ['V'],
