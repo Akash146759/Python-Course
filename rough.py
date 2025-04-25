@@ -1,9 +1,23 @@
+# Creating a dictionary
+student = {
+    "id1":
+    {
+    "name": "Akash",
+    "age": 31,
+    "class": "8th",
+    "favorite_subject": "Math"
+    },
+    "id2":
+    {
+    "name": "Havish",
+    "age": 13,
+    "class": "8th",
+    "favorite_subject": "Chemistry"
+    }
+    }
+# Accessing a value using a key
 
-a = 'Fat'
-c = 0
-for i in a:
+print('Not a good student',student['id1'])  
+print('best student',student['id2'])  
 
-	print('index value :', c, 'String Value=' ,i)
-	c+=1
-	
-print(a[-1])
+

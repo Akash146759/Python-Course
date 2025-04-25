@@ -23,3 +23,15 @@ print(_slice)
 #if the start index isn't defined, is taken from the beg inning of the tuple
 _slice = tuplex[:6]
 print(_slice)
+
+new_tuple = tuple1 + tuplex
+print(new_tuple)
+
+new_tuple = new_tuple * 4
+print(new_tuple)
+print(len(new_tuple))
+print(min(new_tuple))
+
+list1 = [1,2,3,4,5,6]
+ct = tuple(list1)
+print(ct)
