@@ -1,21 +1,21 @@
-class Parrot:
-    
-    # instance attributes
+# Creating a class
+class Dog:
+    # The 'name' and 'age' of the dog will be stored
     def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    
-    # instance method
-    def sing(self, song):
-        return "{} sings {}".format(self.name, song)
+        self.name = name  # The dog's name
+        self.age = age    # The dog's age
 
-    def dance(self):
-        return "{} is now dancing".format(self.name)
+    # Method to make the dog speak
+    def bark(self):
+        print("Woof! Woof! I am", self.name, "and I am", self.age, "years old.")
 
-# instantiate the object
-blu = Parrot("Blu", 10)
+    def woof(self):
+        print("Woof! Woof! I am", self.name, "and I am", self.age, "years old.")
 
-# call our instance methods
-print(blu.sing("'Happy'"))
-print(blu.dance())
+# Creating an object using the class
+my_dog = Dog("Buddy", 5)
+my_dog1 = Dog("Teddy", 50)
 
+# Calling the bark method
+my_dog.bark()
+my_dog1.woof()
