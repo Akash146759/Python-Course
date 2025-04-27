@@ -1,7 +1,7 @@
 # Let's check the datatype of different values
 
 #Integer [ int ]
-a = 5
+a = 50000
 print(a)
 print("type of a: ", type(a))
 
@@ -16,7 +16,7 @@ print(c)
 print("type of c: ", type(c))
 
 #Boolean [bool]    
-d= True
+d= False
 print(d)
 print("type of d: ", type(d))
 
