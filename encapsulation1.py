@@ -10,9 +10,14 @@ class myClass:
 
 	# Function to print value of private variable
 	def hello(self):
+		obj.__privMeth()
 		print("Private Variable value: ",myClass.__privateVar)
 
 # Object creation and method call
-foo = myClass()
-foo.hello()
+obj = myClass()
+try:
+	obj.__privMeth()	
+except:
+	obj.hello()
+
 

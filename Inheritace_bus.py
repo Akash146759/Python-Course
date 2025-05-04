@@ -6,7 +6,7 @@ class Vehicle:
         self.mileage = mileage
     
     def fare(self):
-        total_fare = 50
+        total_fare = 50 
         print('The total fare will be',total_fare)
 
 class Bus(Vehicle):

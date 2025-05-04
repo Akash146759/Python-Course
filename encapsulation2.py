@@ -17,5 +17,5 @@ c.__maxprice = 1000
 c.sell()
 
 # using setter function
-c.setMaxPrice(1000)
+c.setMaxPrice(20000)
 c.sell()

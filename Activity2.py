@@ -1,7 +1,7 @@
 # Assigning Different Variables
 name = "AKASH"
 age = 5
-is_student = False
+is_student = True
 weight = 70.8
 
 # Printing Different Variables and their Data Type

@@ -1,23 +1,13 @@
-# Creating a dictionary
-student = {
-    "id1":
-    {
-    "name": "Akash",
-    "age": 31,
-    "class": "8th",
-    "favorite_subject": "Math"
-    },
-    "id2":
-    {
-    "name": "Havish",
-    "age": 13,
-    "class": "8th",
-    "favorite_subject": "Chemistry"
-    }
-    }
-# Accessing a value using a key
+class StringReverser:
+    def __init__(self, text):
+        self.text = text
+    
+    def reverse_words(self):
+        words = self.text.split()  # Split the string into words
+        reversed_words = words[::-1]  # Reverse the word order
+        return " ".join(reversed_words)  # Join the words back into a string
 
-print('Not a good student',student['id1'])  
-print('best student',student['id2'])  
-
-
+# Example Usage
+sentence = "Hello World from Codingal"
+reverser = StringReverser(sentence)
+print(reverser.reverse_words())  # Output: "Copilot from World Hello"
