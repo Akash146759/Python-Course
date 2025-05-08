@@ -1,6 +1,6 @@
 
 # Taking total amount as input from user
-Amount = 180
+Amount = int(input('number:'))
 
 # Calculating the number of notes of different denominations
 note_100 = Amount//100          #= 180 // 100 = 1 plus remainder will be 80

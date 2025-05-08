@@ -1,12 +1,12 @@
 # Assigning Different Variables
-name = "AKASH"
+name = "vijay"
 age = 5
 is_student = True
 weight = 70.8
 
 # Printing Different Variables and their Data Type
-print("Name :", name.lower())
-print("Name :", name.islower())
+print("Name :", name.upper())
+print("Name :", name.isupper())
 print("Data Type of Name is", type(name))
 
 print("Age :", age)
