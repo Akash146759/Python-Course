@@ -5,13 +5,8 @@ if number>1:
     if(number%i==0):
       print(number, " is not prime")
       break
-    else:    
-        print(number, " is prime")
+  else:    
+    print(number, " is prime")
 else:
   print(number, "is not prime")
-
-
-
-  
-  
   

@@ -1,5 +1,5 @@
 
-num = 7
+num = 10000
 flag = False
 
 for i in range(2,num):
@@ -14,9 +14,4 @@ else:
 
      
 
-#i = 2 [7 % 2 == 1] --> prime number
-#i = 3 [7 % 3 == 1] --> prime number
-#i = 4 [7 % 4 == 3] --> prime number
-#i = 5 [7 % 5 == 3] --> prime number
-#i = 6 [7 % 6 == 1] --> prime number
 

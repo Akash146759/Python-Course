@@ -1,19 +1,22 @@
 def primeSeive(n):
-    prime = [True for i in range(n + 1)]
-    currentNumber = 2
-    while (currentNumber * currentNumber <= n): 
-        if (prime[currentNumber] == True):
-            for i in range(currentNumber ** 2, n + 1, currentNumber):
+    prime = [True] * (n + 1)  # Initialize all numbers as prime
+    p = 2
+    while p * p <= n: 
+        if prime[p]:  # If p is still prime
+            for i in range(p * p, n + 1, p):  # Mark multiples of p as non-prime
                 prime[i] = False
-        currentNumber += 1
-    prime[0]= False
-    prime[1]= False
-    for p in range(n + 1):
-        if prime[p]:
-            print(p)
+        p += 1
 
+    prime[0] = prime[1] = False  # 0 and 1 are not prime numbers
 
-n = int(input("Enter number to find all prime numbers less than the number : "))
-primeSeive(n)
-print ("Following are the prime numbers smaller.")
-print ("than or equal to",n)
+    # Collect and return prime numbers
+    return [p for p in range(n + 1) if prime[p]]
+
+# Get user input
+n = int(input("Enter a number to find all prime numbers less than or equal to it: "))
+
+# Find primes and print them
+primes = primeSeive(n)
+print("Following are the prime numbers smaller than or equal to", n)
+print(primes)
+
