@@ -5,7 +5,7 @@ class flashcard:
 	def __str__(self):
 		
 		#we will return a string
-		return self.word+' ( '+self.meaning+' )'
+		return self.word + ' : ' + self.meaning 
 		
 flash = []
 print("welcome to flashcard application")
