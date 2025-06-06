@@ -1,14 +1,8 @@
-def isEvenOdd(n):
-  if(n ^ 1 == n + 1 ):
-    return True;
-  else:
-    return False;
+# Input from the user
+num = input("Enter a number: ")
 
-number = int(input("Enter your number: "))
-if isEvenOdd(number):
-  print(number, "is even")
+# Using slicing to reverse the number
+reverse = num[::-1]
 
-else:
-  print(number, "is odd")
-  
-  
+# Print the reversed number
+print("Reverse of the number:", reverse)

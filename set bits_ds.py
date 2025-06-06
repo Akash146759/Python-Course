@@ -13,3 +13,6 @@ def numberOfBits(n):
 number = int(input("Enter your number: "))
 numberOfBits(number)
 print("Binary representation:", format(number, "b"))
+
+
+

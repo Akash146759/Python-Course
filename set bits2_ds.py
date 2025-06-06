@@ -9,3 +9,4 @@ number = int(input("Enter the number: "))
 n = int(input("Enter the bit position: "))
 
 setOrNot(number, n)
+
