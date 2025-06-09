@@ -1,17 +1,13 @@
-# Import tkinter for GUI and ttk for improved widgets
 import tkinter as tk
 from tkinter import ttk, messagebox
-from PIL import Image, ImageTk  # Added Pillow for better image handling
 
-
-# Define the RestaurantManagementApp class
 class RestaurantOrderManagement:
-    # Initialize the application
     def __init__(self, root):
-        self.root = root  # The main window of the app
-        self.root.title("Restaurant Management App")  # Set the title of the window
+        self.root = root
+        self.root.title("Restaurant Management App")
+        self.root.geometry("800x600")  # Set window size
 
-        # A dictionary to store the menu items and their prices
+        # Menu items and prices
         self.menu_items = {
             "FRIES MEAL": 2,
             "LUNCH MEAL": 2,
@@ -20,23 +16,19 @@ class RestaurantOrderManagement:
             "CHEESE BURGER": 2.5,
             "DRINKS": 1
         }
+        self.exchange_rate = 82  # Exchange rate for INR
 
-        self.exchange_rate = 82  # Exchange rate for currency conversion
+        # Frame for UI elements
+        frame = ttk.Frame(root, padding=10)
+        frame.pack(expand=True)
 
-        self.setup_background()  # Set up the background image
+        # Title Label
+        ttk.Label(frame, text="Restaurant Order Management", font=("Arial", 20, "bold")).grid(row=0, columnspan=3, pady=10)
 
-        # Create a frame to hold the widgets
-        frame = ttk.Frame(root)
-        frame.place(relx=0.5, rely=0.5, anchor=tk.CENTER)  # Place at center of the window
+        self.menu_labels = {}
+        self.menu_quantities = {}
 
-        # Heading label
-        ttk.Label(frame, text="Restaurant Order Management", font=("Arial", 20, "bold")).grid(
-            row=0, columnspan=3, padx=10, pady=10)
-
-        self.menu_labels = {}  # To store references to menu item labels
-        self.menu_quantities = {}  # To store references to quantity entry widgets
-
-        # Create labels and entry widgets for each menu item
+        # Create labels and input fields for each menu item
         for i, (item, price) in enumerate(self.menu_items.items(), start=1):
             label = ttk.Label(frame, text=f"{item} (${price}):", font=("Arial", 12))
             label.grid(row=i, column=0, padx=10, pady=5)
@@ -48,32 +40,17 @@ class RestaurantOrderManagement:
 
         # Currency selection
         self.currency_var = tk.StringVar()
-        ttk.Label(frame, text="Currency:", font=("Arial", 12)).grid(
-            row=len(self.menu_items) + 1, column=0, padx=10, pady=5)
+        ttk.Label(frame, text="Currency:", font=("Arial", 12)).grid(row=len(self.menu_items) + 1, column=0, padx=10, pady=5)
 
-        # Dropdown for currency selection
-        currency_dropdown = ttk.Combobox(frame, textvariable=self.currency_var, state="readonly", width=18,
-                                         values=('USD', 'INR'))
+        currency_dropdown = ttk.Combobox(frame, textvariable=self.currency_var, state="readonly", width=18, values=('USD', 'INR'))
         currency_dropdown.grid(row=len(self.menu_items) + 1, column=1, padx=10, pady=5)
-        currency_dropdown.current(0)  # Set default currency
-        self.currency_var.trace('w', self.update_menu_prices)  # Update prices when currency changes
+        currency_dropdown.current(0)
+        self.currency_var.trace('w', self.update_menu_prices)
 
-        # Button to place the order
+        # Place Order Button
         order_button = ttk.Button(frame, text="Place Order", command=self.place_order)
-        order_button.grid(row=len(self.menu_items) + 2, columnspan=3, padx=10, pady=10)
+        order_button.grid(row=len(self.menu_items) + 2, columnspan=3, pady=10)
 
-    # Method to set up the background image
-    def setup_background(self):
-        bg_width, bg_height = 800, 600
-        canvas = tk.Canvas(self.root, width=bg_width, height=bg_height)
-        canvas.pack()
-        # Using Pillow for better image handling
-        original_image = Image.open("Margherita Pizza.jpg")
-        resized_image = original_image.resize((bg_width, bg_height))
-        self.bg_image = ImageTk.PhotoImage(resized_image)
-        canvas.create_image(0, 0, anchor=tk.NW, image=self.bg_image)
-
-    # Method to update the menu prices based on the selected currency
     def update_menu_prices(self, *args):
         currency = self.currency_var.get()
         symbol = "₹" if currency == "INR" else "$"
@@ -82,7 +59,6 @@ class RestaurantOrderManagement:
             price = self.menu_items[item] * rate
             label.config(text=f"{item} ({symbol}{price:.2f}):")
 
-    # Method to place an order
     def place_order(self):
         total_cost = 0
         order_summary = "Order Summary:\n"
@@ -100,15 +76,11 @@ class RestaurantOrderManagement:
                     order_summary += f"{item}: {quantity} x {symbol}{price:.2f} = {symbol}{cost:.2f}\n"
         if total_cost > 0:
             order_summary += f"\nTotal Cost: {symbol}{total_cost:.2f}"
-            messagebox.showinfo("Order Placed", order_summary)  # Show order summary in a message box
+            messagebox.showinfo("Order Placed", order_summary)
         else:
-            # Show error if no items are ordered
             messagebox.showerror("Error", "Please order at least one item.")
 
-
-# Main block to run the app
 if __name__ == "__main__":
     root = tk.Tk()
     app = RestaurantOrderManagement(root)
-    root.geometry("800x600")  # Set the size of the window
-    root.mainloop()  # Start the GUI loop
+    root.mainloop()

@@ -49,4 +49,5 @@ name_entry.pack()
 btn.pack()
 text_box.pack()
 
-display()
+
+root.mainloop()
