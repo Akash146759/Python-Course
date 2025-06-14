@@ -1,8 +1,8 @@
-# Input from the user
-num = input("Enter a number: ")
 
-# Using slicing to reverse the number
-reverse = num[::-1]
+for i in range(5):
+    for j in range(i):
+        print(j, end=" ")
+    print()
 
-# Print the reversed number
-print("Reverse of the number:", reverse)
+
+i = 0
