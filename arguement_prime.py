@@ -1,4 +1,4 @@
-num = 17
+num = 20
 flag = False
     
 for i in range(2, num):

@@ -7,6 +7,11 @@ def bill(bill_amount, tip_perc):
 amount = int(input('enter bill amount : '))
 tip_perc = int(input('enter tip percentage amount : '))
 
+
+
 bill(amount, tip_perc)
-bill(1000, 10)
+
+bill(1200,20)
+
+
 

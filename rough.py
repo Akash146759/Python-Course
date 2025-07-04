@@ -1,21 +1,14 @@
-a = 'Hello Samairaah '
-b = " Nice to Meet you"
+import matplotlib.pyplot as plt
 
+# First plot in a 1 row x 2 column layout
+plt.subplot(1, 2, 1)
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.title("Plot 1")
 
+# Second plot in the same layout
+plt.subplot(1, 2, 2)
+plt.plot([1, 2, 3], [6, 5, 4])
+plt.title("Plot 2")
 
-print(a + b)
-
-
-x = 10
-y = 20
-
-print('Addition',x + y)
-print('Division',y / x)
-print('Subtraction',x - y)
-print('Multiplication',x * y)
-
-file = open("example.txt", "r")  # Read mode
-file = open("example.txt", "w")  # Write mode (overwrites existing content)
-file = open("example.txt", "a")  # Append mode (adds to existing content)
-file = open("example.txt", "r+") # Read & write mode
-
+plt.suptitle("Using subplot()")
+plt.show()

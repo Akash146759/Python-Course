@@ -6,10 +6,12 @@ def factorial(n):
         return n * factorial(n - 1)  # Recursive call
 
 # Input from user
-num = int(input("Enter a number: "))
+vijay = int(input("Enter a number: "))
 
 # Check if the number is negative
-if num < 0:
+if vijay < 0:
     print("Factorial does not exist for negative numbers.")
 else:
-    print(f"The factorial of {num} is {factorial(num)}")
+    print(f"The factorial of {vijay} is {factorial(vijay)}")
+
+
