@@ -1,14 +1,14 @@
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
 
-# First plot in a 1 row x 2 column layout
-plt.subplot(1, 2, 1)
-plt.plot([1, 2, 3], [4, 5, 6])
-plt.title("Plot 1")
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+X, Y = np.meshgrid(x, y)
+Z = np.sin(np.sqrt(X**2 + Y**2))
 
-# Second plot in the same layout
-plt.subplot(1, 2, 2)
-plt.plot([1, 2, 3], [6, 5, 4])
-plt.title("Plot 2")
-
-plt.suptitle("Using subplot()")
+plt.contour(X, Y, Z, colors='black')
+plt.contourf(X, Y, Z, cmap='plasma')
+plt.colorbar()
+plt.title("Contour Plot")
 plt.show()
