@@ -6,6 +6,32 @@ user_choice = input("Choose Rock, Paper, or Scissors: ")
 
 computer_choice = random.choice(options)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("You chose:", user_choice)
 print("Computer chose:", computer_choice)
 

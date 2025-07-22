@@ -12,4 +12,4 @@ def getRandomDate(startDate, endDate):
 
     return randomDate
 
-print("Random Date = ", getRandomDate("1/1/1991", "12/12/2024"))
+print("Random Date = ", getRandomDate("1/1/2024", "12/12/2024"))
